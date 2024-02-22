@@ -1,0 +1,239 @@
+:root {
+    --primary-color: #9f9998;
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --border-color:  #dbdbdb;
+    --header-height: 130px;
+    --navbar-height: 34px;
+    --header-with-search-height: calc(var( --header-height) - var(--navbar-height));
+    --header-sort-bar-height: 46px;
+    --color-color:rgb(114, 172, 231);
+}
+
+* {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto Condensed', sans-serif;  /*Chủng chữ không có chân ' sans-serif ' */
+    box-sizing: border-box;
+}
+
+/* RESPONSIVE */
+
+.grid__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+/* TEST */
+
+.grid__column-2 {
+     padding-left: 5px;
+     padding-right: 5px;
+     width: 16.6667%;
+    
+
+ }
+
+
+.grid__column-2-4 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 20%;
+}
+
+.grid__column-10 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 83.3334%;
+
+ }
+
+/* Animation */
+@keyframes TanTai {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes growth {
+    from {
+        transform: scale(var(--growth-from));
+    }
+    to {
+      
+        transform: scale(var(--growth-to));
+    }
+}
+
+/* MODAL */
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    animation: TanTai linear 0.3s;
+}
+
+.modal_overlay {
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     background-color: rgba(252, 252, 252, 0.724);
+}
+
+.modal_body {
+ --growth-from: 0.7;
+ --growth-to: 1;
+  margin: auto;
+  position: relative;
+  z-index: 1;
+  animation: growth linear;
+
+}
+
+/* BUTTON STYLE */
+
+.btn {
+    min-width: 124px;
+    height: 36px;
+    border: none;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    font-size: 1.3rem;
+    padding: 0 12px;
+    outline: none;
+    cursor: pointer;
+    color: var(--text-color);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+
+
+.btn-tantai:hover{
+     background-color: rgb(218, 213, 213);
+}
+.btn.btn-primary {
+    color: var(--white-color);
+    background-color: rgb(236, 43, 43);
+}
+
+.btn.btn--disabled {
+    cursor: default;
+    background-color: #0d0c0c;
+}
+
+
+/* SELECTION */
+
+.select-input {
+    position: relative;
+    min-width: 200px;
+    height: 34px;
+    padding: 2px 12px;
+    border-radius: 2px;
+    background-color:white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1.5;
+}
+
+
+.select-input_label {
+    font-size : 1.4rem;
+    color:var(--black-color);
+
+}
+
+.select-input__icon {
+    font-size: 1.4rem;
+    color:rgb(113, 111, 111);
+    position: relative;
+    top: 1px;
+}
+
+.select-input:hover  .select-input__list {
+    display: block;
+}
+
+.select-input__list {
+    position: absolute;
+    left: 0 ;
+    right: 0;
+    top: 25px;
+    z-index: 1;
+    border-radius: 2px;
+    padding:8px 16px;
+    background-color: white;
+    list-style:none;
+    display: none;
+    box-shadow: 0 2px 0 gray;
+}  
+
+.select-input__link {
+  font-size : 1.4rem;
+  color:black;
+  text-decoration: none;
+  display: block;
+  padding : 4px 0 ;
+
+
+}
+
+/* PAGINATION */
+.pagination {
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    list-style: none;
+}
+
+.pagination-item {
+    margin: 0 12px;
+}
+
+.pagination-item__link {
+    --height: 30px;
+    display: block;
+     text-decoration: none;
+     font-size: 1.5rem;
+     font-weight: 200;
+     color: #939393;
+     min-width: 40px;
+     height: var(--height);
+     line-height: var(--height);
+     text-align: center;
+     border-radius: 2px;
+}
+
+.pagination-item__icon {
+
+}
+
+.pagination-item--active .pagination-item__link {
+     color: var(--white-color);
+     background-color: red;
+}
+
+.pagination-item--active .pagination-item__link:hover {
+     background-color: rgb(237, 102, 125);
+}
+
+
+

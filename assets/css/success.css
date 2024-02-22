@@ -1,0 +1,52 @@
+ #order-success {
+    margin-top: 20px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 3px;
+    width: inherit;
+ }
+
+ .order-success-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ }
+
+ .order-success-wrap img {
+    width: 700px;
+    height: 700px;
+    margin-bottom: 30px;
+ }
+
+#order-success-txt {
+    text-align: center;
+ }
+
+ #order-success-txt h3 {
+    font-size: 35px;
+    font-weight: bold; 
+    text-transform: uppercase;
+    color : rgb(3, 135, 29);
+ }
+
+ #order-success-txt  p {
+    font-size: 17px;
+ }
+
+p {
+    margin-top : 0;
+    margin-bottom: 1.5rem;
+ }
+
+ .fa-solid {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+ }
+
+ #order-success-txt span {
+    color: red;
+    font-weight: bold;   
+ }
+
+
+
